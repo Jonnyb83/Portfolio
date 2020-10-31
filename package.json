@@ -4,7 +4,7 @@
   "description": "my portfolio",
   "main": "index.js",
   "scripts": {
-      "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "author": "jonnyb83",
   "license": "ISC",
@@ -12,4 +12,3 @@
     "node-sass": "^4.14.1"
   }
 }
-
