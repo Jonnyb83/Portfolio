@@ -26,9 +26,11 @@ body {
   background-position: top;
   position: relative;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); }
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
 
 .header-second {
+  margin-top: 3rem;
+  margin-bottom: 20rem;
   height: 65vh;
   background-image: linear-gradient(to right bottom, rgba(6, 208, 235, 0.6), rgba(6, 24, 126, 0.95));
   background-size: cover;
@@ -72,24 +74,37 @@ body {
   text-transform: uppercase;
   font-weight: 500;
   display: inline-block;
-  background-image: linear-gradient(to right, #06d0eb, #06187e);
+  background-image: linear-gradient(to right bottom, rgba(126, 126, 126, 0.55), rgba(71, 71, 71, 0.75));
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: .2rem; }
 
 .header-second-text-box {
+  max-width: 600px;
+  display: flexbox;
   color: white;
   text-transform: uppercase;
   backface-visibility: hidden;
   padding: 0 auto;
   margin-top: 3rem;
   margin-bottom: 15rem;
+  background-color: transparent;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: left;
   letter-spacing: .2rem; }
+  .header-second-text-box_grid {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+
+@media screen and (max-width: 600px) {
+  .break {
+    font-size: 50%;
+    padding: 0.5rem;
+    margin: 0.5rem; } }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -132,7 +147,7 @@ body {
 
 .btn--gray {
   background-color: #fff;
-  color: #7e7e7e;
+  color: #474747;
   font-weight: 700;
   text-transform: bold;
   margin-top: 10rem;
@@ -295,3 +310,39 @@ hr {
   font-size: 1.2rem;
   height: 1rem;
   margin-top: 1.5rem; }
+
+.grid-wrapper {
+  display: grid;
+  gap: 400px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 2fr)); }
+
+/*All children imges inside box sellector*/
+.box > img {
+  width: 100%; }
+
+.box {
+  background-image: linear-gradient(to right bottom, rgba(126, 126, 126, 0.55), rgba(71, 71, 71, 0.75));
+  padding: 30px;
+  margin: 0; }
+
+.text-box {
+  font-size: 2rem; }
+
+.zone {
+  /*padding:30px 50px; */
+  background-color: #e6e6e6;
+  margin-top: 0;
+  margin-bottom: 0;
+  cursor: pointer;
+  /*display:inline-block;*/
+  color: #FFF;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  transition: all 0.3s linear; }
+
+.zone:hover {
+  -webkit-transform: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+  -moz-transform: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+  -o-transform: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+  transform: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px; }
